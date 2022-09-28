@@ -22,6 +22,13 @@ class CustomUserTests(TestCase):
         self.assertFalse(user.is_staff)
         self.assertFalse(user.is_superuser)
 
+
+    """new superuser creation test
+    Parameters
+    ----------
+    TestCase : unit
+        this test case confirms that a new superuser can be created
+    """
     def test_create_superuser(self):
         User = get_user_model()
         admin_user = User.objects.create_superuser(
